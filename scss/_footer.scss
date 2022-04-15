@@ -1,0 +1,43 @@
+footer {
+  background-color: lighten($color: hsl(168, 34%, 41%), $amount: 70%);
+  min-height: 337px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  h3 {
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    font-size: 24px;
+    color: hsl(167, 40%, 24%);
+  }
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    column-gap: 60px;
+
+    a {
+      text-decoration: none;
+      color: hsl(168, 34%, 41%);
+      font-family: "Barlow", sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+
+      &:hover {
+        color: hsl(0, 0%, 100%);
+      }
+    }
+  }
+
+  .social-media {
+    display: flex;
+    column-gap: 30px;
+
+    svg:hover > path {
+      fill: hsl(0, 0%, 100%);
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: max-content;
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10vw;
+    row-gap: 20px;
+
+    .heading_h2 {
+      font-size: 38px;
+      font-family: "Fraunces", serif;
+      color: hsl(212, 27%, 19%);
+    }
+
+    .details {
+      line-height: 1.3;
+      font-family: "Barlow", sans-serif;
+    }
+
+    .learn-more {
+      text-decoration: none;
+      color: hsl(212, 27%, 19%);
+      font-family: "Fraunces", serif;
+      font-weight: 900;
+      font-size: 24px;
+      position: relative;
+    }
+
+    .img-wrapper {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .services {
+    // background-position: center top;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    row-gap: 30px;
+    height: 500px;
+    padding: 3vh 10vw 10vh;
+
+    .heading_h3 {
+      font-family: "Fraunces", serif;
+      font-size: 28px;
+      font-weight: 900;
+      text-transform: capitalize;
+    }
+
+    > p {
+      text-align: center;
+      font-family: "Barlow", sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  }
+
+  .graphic-design {
+    background-image: url("/images/desktop/image-graphic-design.jpg");
+    background-size: 100% 100%;
+    background-position: top center;
+
+    .heading_h3,
+    p {
+      color: hsl(167, 40%, 24%);
+    }
+  }
+
+  .photography {
+    background-image: url("/images/desktop/image-photography.jpg");
+    background-size: 100% 100%;
+
+    .heading_h3,
+    p {
+      color: hsl(198, 62%, 26%);
+    }
+  }
+}
+
+#learn-more_1::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: hsla(51, 100%, 49%, 0.4);
+}
+
+#learn-more_1:hover::after {
+  background-color: hsla(51, 100%, 49%, 1);
+}
+#learn-more_2::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: hsla(7, 99%, 70%, 0.4);
+}
+
+#learn-more_2:hover::after {
+  background-color: hsla(7, 99%, 70%, 1);
+}
