@@ -32,12 +32,24 @@
   </head>
   <body>
     <header class="header">
-      <nav class="nav-links">
+      <nav class="nav-links hide-for-mobile">
         <li class="logo"><a href="#">Sunnyside</a></li>
         <li class="nav-links__item"><a href="#">About</a></li>
         <li class="nav-links__item"><a href="#">Service</a></li>
         <li class="nav-links__item"><a href="#">Projects</a></li>
         <li class="nav-links__item"><a href="#">Contact</a></li>
+
+        <a href="#" class="header__menu hide-for-desktop">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <nav class="mobile-menu is-active">
+          <li class="mobile-menu__item"><a href="#">About</a></li>
+          <li class="mobile-menu__item"><a href="#">Service</a></li>
+          <li class="mobile-menu__item"><a href="#">Projects</a></li>
+          <li class="mobile-menu__item"><a href="#">Contact</a></li>
+        </nav>
       </nav>
       <h1 class="heading_h1">We are creatives</h1>
       <img
@@ -47,7 +59,7 @@
       />
     </header>
     <main class="main">
-      <section class="section">
+      <section class="section transform">
         <h2 class="heading_h2">Transform your brand</h2>
         <p class="details">
           We are a full-service creative agency specializing in helping brands
@@ -56,21 +68,21 @@
         </p>
         <a href="#" class="learn-more" id="learn-more_1">Learn more</a>
       </section>
-      <div class="img-wrapper">
+      <div class="img-wrapper eggy">
         <img
           class="img"
           src="/images/desktop/image-transform.jpg"
           alt="an egg in a yellow background with shadow"
         />
       </div>
-      <div class="img-wrapper">
+      <div class="img-wrapper cup">
         <img
           class="img"
           src="/images/desktop/image-stand-out.jpg"
           alt="a pink cup with a pink background"
         />
       </div>
-      <section class="section">
+      <section class="section stand-out">
         <h2 class="heading_h2">Stand out to the right audience</h2>
         <p class="details">
           Using a collaborative formula of designers, researchers,
@@ -80,18 +92,23 @@
         <a href="#" class="learn-more" id="learn-more_2">Learn more</a>
       </section>
       <section class="services graphic-design">
-        <h3 class="heading_h3">Graphic design</h3>
-        <p>
-          Great design makes you memorable. We deliver artwork that underscores
-          your brand message and captures potential clients’ attention.
-        </p>
+        <div>
+          <h3 class="heading_h3">Graphic design</h3>
+          <p>
+            Great design makes you memorable. We deliver artwork that
+            underscores your brand message and captures potential clients’
+            attention.
+          </p>
+        </div>
       </section>
       <section class="services photography">
-        <h3 class="heading_h3">Photography</h3>
-        <p>
-          Increase your credibility by getting the most stunning, high-quality
-          photos that improve your business image.
-        </p>
+        <div>
+          <h3 class="heading_h3">Photography</h3>
+          <p>
+            Increase your credibility by getting the most stunning, high-quality
+            photos that improve your business image.
+          </p>
+        </div>
       </section>
     </main>
 
@@ -196,6 +213,7 @@
         </svg>
       </div>
     </footer>
+    <script src="index.js"></script>
     <!-- 
   About
   Services

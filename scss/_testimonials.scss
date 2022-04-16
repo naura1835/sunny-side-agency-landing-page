@@ -1,12 +1,22 @@
 .testimonials {
-  max-height: 700px;
+  @include breakpoint(mobile) {
+    grid-template-columns: 1fr;
+  }
+  min-height: 700px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto 1fr;
-  gap: 40px;
-  padding: 20vh;
+  gap: 50px;
+  padding: 140px 5%;
 
   .testimonials__heading {
+    @include breakpoint(mobile) {
+      grid-column: 1/2;
+      text-align: center;
+      font-size: 18px;
+      letter-spacing: 0.1rem;
+    }
+
     grid-column: 1/4;
     justify-self: center;
     color: hsl(213, 9%, 39%);
@@ -18,10 +28,8 @@
   }
 
   .testimonial {
+    @include flexCenter;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-between;
     row-gap: 40px;
 
@@ -39,18 +47,22 @@
       line-height: 1.6;
     }
 
-    .heading_h4 {
-      font-family: "Fraunces", serif;
-      color: hsl(212, 27%, 19%);
-      font-size: 18px;
+    div {
       text-align: center;
-    }
 
-    small {
-      font-size: 15px;
-      font-family: "Barlow", sans-serif;
-      font-weight: 600;
-      color: hsla(213, 9%, 39%, 0.6);
+      .heading_h4 {
+        font-family: "Fraunces", serif;
+        color: hsl(212, 27%, 19%);
+        font-size: 18px;
+        text-align: center;
+      }
+
+      small {
+        font-size: 15px;
+        font-family: "Barlow", sans-serif;
+        font-weight: 600;
+        color: hsla(213, 9%, 39%, 0.6);
+      }
     }
   }
 }

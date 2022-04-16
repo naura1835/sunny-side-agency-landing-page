@@ -1,19 +1,52 @@
 .main {
+  @include breakpoint(mobile) {
+    grid-template-columns: 1fr;
+    text-align: center;
+
+    .eggy {
+      grid-row: 1/2;
+
+      img {
+        content: url("/images/mobile/image-transform.jpg");
+      }
+    }
+
+    .cone {
+      img {
+        content: url("/images/mobile/image-stand-out.jpg");
+      }
+    }
+
+    .learn-more {
+      align-self: center;
+    }
+  }
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: max-content;
 
   .section {
+    @include breakpoint(mobile-min) {
+      padding: 15%;
+    }
+    @include breakpoint(mobile) {
+      padding: 10%;
+    }
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 10vw;
+    justify-content: center;
+    padding: 20%;
     row-gap: 20px;
 
     .heading_h2 {
       font-size: 38px;
       font-family: "Fraunces", serif;
       color: hsl(212, 27%, 19%);
+      @include breakpoint(mobile-min) {
+        font-size: 30px;
+      }
     }
 
     .details {
@@ -31,56 +64,68 @@
     }
 
     .img-wrapper {
+      //   @include breakpoint(mobile) {
+      //   }
       height: 100%;
       width: 100%;
     }
   }
 
   .services {
-    // background-position: center top;
-    display: flex;
-    flex-direction: column;
+    @include flexCenter;
     justify-content: flex-end;
-    align-items: center;
-    row-gap: 30px;
-    height: 500px;
-    padding: 3vh 10vw 10vh;
+    min-height: 500px;
+    width: 100%;
+    padding-bottom: 10%;
+    padding-left: 5vw;
+    padding-right: 5vw;
 
+    div {
+      @include breakpoint_min(desktop) {
+        width: 70%;
+      }
+      @include flexCenter;
+      text-align: center;
+      height: fit-content;
+      width: 100%;
+    }
     .heading_h3 {
+      margin-bottom: 20px;
       font-family: "Fraunces", serif;
       font-size: 28px;
       font-weight: 900;
       text-transform: capitalize;
     }
 
-    > p {
+    p {
+      @include breakpoint(mobile-min) {
+        font-size: 15px;
+      }
       text-align: center;
       font-family: "Barlow", sans-serif;
-      font-weight: 600;
+      font-weight: bold;
       font-size: 18px;
       line-height: 1.6;
     }
   }
 
   .graphic-design {
+    @include breakpoint(mobile) {
+      background-image: url("/images/mobile/image-graphic-design.jpg");
+    }
+    @include serviceText(hsl(167, 40%, 24%));
     background-image: url("/images/desktop/image-graphic-design.jpg");
     background-size: 100% 100%;
     background-position: top center;
-
-    .heading_h3,
-    p {
-      color: hsl(167, 40%, 24%);
-    }
   }
 
   .photography {
+    @include breakpoint(mobile) {
+      background-image: url("/images/mobile/image-photography.jpg");
+    }
+    @include serviceText(hsl(198, 62%, 26%));
     background-image: url("/images/desktop/image-photography.jpg");
     background-size: 100% 100%;
-
-    .heading_h3,
-    p {
-      color: hsl(198, 62%, 26%);
-    }
   }
 }
 

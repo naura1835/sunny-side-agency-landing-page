@@ -1,7 +1,15 @@
 .gallery {
+  @include breakpoint(mobile) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    img {
+      aspect-ratio: 1;
+    }
+  }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 436px;
+  max-height: 440px;
 
   img {
     width: 100%;
