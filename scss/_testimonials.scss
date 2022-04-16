@@ -1,5 +1,5 @@
 .testimonials {
-  @include breakpoint(mobile) {
+  @include breakpoint(tablet) {
     grid-template-columns: 1fr;
   }
   min-height: 700px;
@@ -10,7 +10,7 @@
   padding: 140px 5%;
 
   .testimonials__heading {
-    @include breakpoint(mobile) {
+    @include breakpoint(tablet) {
       grid-column: 1/2;
       text-align: center;
       font-size: 18px;

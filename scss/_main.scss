@@ -27,6 +27,9 @@
   grid-template-rows: max-content;
 
   .section {
+    @include breakpoint(tablet) {
+      padding: 10%;
+    }
     @include breakpoint(mobile-min) {
       padding: 15%;
     }
@@ -98,7 +101,7 @@
     }
 
     p {
-      @include breakpoint(mobile-min) {
+      @include breakpoint(tablet) {
         font-size: 15px;
       }
       text-align: center;
