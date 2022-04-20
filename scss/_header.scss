@@ -13,6 +13,7 @@
 
   .heading_h1 {
     text-align: center;
+    margin-top: 2%;
 
     @include breakpoint(header-bp) {
       font-size: 30px;
@@ -33,7 +34,7 @@
     }
 
     position: relative;
-    top: 15%;
+    top: 10%;
   }
 
   &__menu {
