@@ -1,13 +1,13 @@
 .header {
   @include breakpoint(mobile) {
-    background-image: url("images/mobile/image-header.jpg");
+    background-image: url("../images/mobile/image-header.jpg");
     height: 540px;
   }
   @include flexCenter;
   height: 770px;
   width: 100%;
   row-gap: 10vh;
-  background-image: url("images/desktop/image-header.jpg");
+  background-image: url("../images/desktop/image-header.jpg");
   background-size: cover;
   background-position: center;
 
